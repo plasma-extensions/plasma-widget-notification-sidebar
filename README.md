@@ -1,0 +1,1 @@
+# plasma-widget-notification-sidebar
