@@ -12,8 +12,11 @@ include(KDECMakeSettings)
 include(KDECompilerSettings)
 
 find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Core Quick)
-find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Plasma)
+find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Plasma WindowSystem)
 
 # add_subdirectory(plugin)
 
-plasma_install_package(plasmoid org.plasma-light.notifications)
+add_subdirectory(lib)
+add_subdirectory(plugin)
+
+plasma_install_package(plasmoid org.plasma-light.notifications-sidebar)

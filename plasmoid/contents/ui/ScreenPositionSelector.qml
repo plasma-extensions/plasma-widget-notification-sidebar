@@ -23,7 +23,7 @@ import QtQuick.Controls 1.0 as QtControls
 import QtQuick.Window 2.2
 import org.kde.plasma.core 2.0 as PlasmaCore
 
-import org.kde.plasma.private.notifications 1.0
+import org.plasma_light.private.notifications 1.0
 
 QtControls.GroupBox {
     id: monitorPanel

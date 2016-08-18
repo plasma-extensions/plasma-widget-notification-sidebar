@@ -18,10 +18,11 @@
  */
 
 import QtQuick 2.0
+import QtQuick.Window 2.2
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
-import org.kde.plasma.private.notifications 1.0
+import org.plasma_light.private.notifications 1.0
 
 
 Column {
@@ -75,6 +76,7 @@ Column {
             notificationsModel.inserting = false;
         }
 
+        print ("About to show the notification!!")
         notificationPositioner.displayNotification(notification);
     }
 
@@ -181,14 +183,14 @@ Column {
 
     Connections {
         target: plasmoid.nativeInterface
-        /*onAvailableScreenRectChanged: {
+        onAvailableScreenRectChanged: {
             notificationPositioner.setPlasmoidScreenGeometry(availableScreenRect);
-        }*/
+        }
     }
 
     NotificationsHelper {
         id: notificationPositioner
-        // popupLocation: plasmoid.nativeInterface.screenPosition
+        popupLocation: plasmoid.nativeInterface.screenPosition
 
         Component.onCompleted: {
             notificationPositioner.setPlasmoidScreenGeometry(plasmoid.nativeInterface.availableScreenRect);
