@@ -149,7 +149,7 @@ Item {
             property bool wasExpanded: false
 
             onPressed: wasExpanded = sidePanel.visible
-            onClicked: if (!wasExpanded) sidePanel.display();
+            onClicked: if (!wasExpanded) sidePanel.display(); else sidePanel.visible = false;
         }
 
         states: [
