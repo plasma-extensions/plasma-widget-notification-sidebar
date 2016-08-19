@@ -1,9 +1,9 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=Notifications side panel.
+Name=Notifications sidebar.
 Name[es]=Panel lateral de notificaciones.
-Comment=Provides a side panel with the system notifications.
-Comment[es]=Provee un panel lateral con las notificaciones del sistema.
+Comment=Displasys notifications and jobs in a sidebar.
+Comment[es]=Muestra las notificaciones y tareas del sistema en un panel lateral.
 Type=Service
 Icon=preferences-desktop-notification
 X-KDE-ParentApp=
@@ -19,8 +19,5 @@ X-Plasma-API=declarativeappletscript
 X-KDE-PluginInfo-EnabledByDefault=true
 X-Plasma-Provides=org.plasma-light.notifications-sidebar
 X-KDE-Library=plasma_light_applet_notifications
-
 X-Plasma-MainScript=ui/main.qml
 X-Plasma-RequiredExtensions=LaunchApp
-X-Plasma-NotificationArea=true
-X-Plasma-NotificationAreaCategory=ApplicationStatus
