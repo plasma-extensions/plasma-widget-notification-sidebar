@@ -127,7 +127,12 @@ MouseEventListener {
 
             PlasmaExtras.ScrollArea {
                 id: mainScrollArea
-                anchors.fill: parent
+                anchors {
+                    top: parent.top
+                    bottom: clearAllContainer.top
+                    left: parent.left
+                    right: parent.right
+                }
 
                 implicitWidth: theme.mSize(theme.defaultFont).width * 40
                 implicitHeight: Math.min(theme.mSize(theme.defaultFont).height * 40, Math.max(theme.mSize(theme.defaultFont).height * 6, contentsColumn.height))
@@ -182,6 +187,7 @@ MouseEventListener {
             }
 
             Rectangle {
+                id: clearAllContainer
                 anchors {
                     right: parent.right
                     left: parent.left
@@ -189,18 +195,19 @@ MouseEventListener {
                 }
                 height: 50
                 color: "transparent"
-                // opacity: 0.6
 
                 visible: notificationsApplet.totalCount > 0
 
                 PlasmaComponents.Button {
                     anchors {
                         verticalCenter: parent.verticalCenter
+                        verticalCenterOffset: 5
                         right: parent.right
                         rightMargin: 12
                     }
 
                     text: i18n("Clear all")
+                    onClicked: notificationsLoader.item.clearAll()
                 }
             }
 

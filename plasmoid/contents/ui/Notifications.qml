@@ -121,6 +121,10 @@ Column {
         service.startOperationCall(op)
     }
 
+    function clearAll() {
+        notificationsModel.clear();
+    }
+
     Component {
         id: notificationPopupComponent
         NotificationPopup { }
