@@ -18,6 +18,7 @@
  */
 
 import QtQuick 2.0
+import QtQuick.Layouts 1.1
 import QtQuick.Controls.Private 1.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
@@ -112,55 +113,57 @@ PlasmaComponents.ListItem {
             actions: model.actions
             created: model.created
 
-            textItem: MouseArea {
-                id: contextMouseArea
-                height: bodyText.paintedHeight
+            textItem: TextEdit {
+                anchors.fill: parent
+                id: bodyText
 
-                acceptedButtons: Qt.RightButton
-                preventStealing: true
+                text: body
+                color: PlasmaCore.ColorScope.textColor
+                selectedTextColor: theme.viewBackgroundColor
+                selectionColor: theme.viewFocusColor
+                font.capitalization: theme.defaultFont.capitalization
+                font.family: theme.defaultFont.family
+                font.italic: theme.defaultFont.italic
+                font.letterSpacing: theme.defaultFont.letterSpacing
+                font.pointSize: theme.defaultFont.pointSize
+                font.strikeout: theme.defaultFont.strikeout
+                font.underline: theme.defaultFont.underline
+                font.weight: theme.defaultFont.weight
+                font.wordSpacing: theme.defaultFont.wordSpacing
+                renderType: Text.NativeRendering
+                enabled: !Settings.isMobile
+                selectByMouse: true
+                readOnly: true
+                wrapMode: Text.Wrap
+                textFormat: TextEdit.RichText
 
-                onPressed: contextMenu.open(mouse.x, mouse.y)
+                onLinkActivated: Qt.openUrlExternally(link)
 
-                PlasmaComponents.ContextMenu {
-                    id: contextMenu
-                    visualParent: contextMouseArea
+                MouseArea {
+                    id: contextMouseArea
+                    height: bodyText.paintedHeight
 
-                    PlasmaComponents.MenuItem {
-                        text: i18n("Copy")
-                        onClicked: bodyText.copy()
-                    }
-
-                    PlasmaComponents.MenuItem {
-                        text: i18n("Select All")
-                        onClicked: bodyText.selectAll()
-                    }
-                }
-
-                TextEdit {
-                    id: bodyText
                     anchors.fill: parent
 
-                    text: body
-                    color: PlasmaCore.ColorScope.textColor
-                    selectedTextColor: theme.viewBackgroundColor
-                    selectionColor: theme.viewFocusColor
-                    font.capitalization: theme.defaultFont.capitalization
-                    font.family: theme.defaultFont.family
-                    font.italic: theme.defaultFont.italic
-                    font.letterSpacing: theme.defaultFont.letterSpacing
-                    font.pointSize: theme.defaultFont.pointSize
-                    font.strikeout: theme.defaultFont.strikeout
-                    font.underline: theme.defaultFont.underline
-                    font.weight: theme.defaultFont.weight
-                    font.wordSpacing: theme.defaultFont.wordSpacing
-                    renderType: Text.NativeRendering
-                    enabled: !Settings.isMobile
-                    selectByMouse: true
-                    readOnly: true
-                    wrapMode: Text.Wrap
-                    textFormat: TextEdit.RichText
+                    acceptedButtons: Qt.RightButton
+                    preventStealing: true
 
-                    onLinkActivated: Qt.openUrlExternally(link)
+                    onPressed: contextMenu.open(mouse.x, mouse.y)
+
+                    PlasmaComponents.ContextMenu {
+                        id: contextMenu
+                        visualParent: contextMouseArea
+
+                        PlasmaComponents.MenuItem {
+                            text: i18n("Copy")
+                            onClicked: bodyText.copy()
+                        }
+
+                        PlasmaComponents.MenuItem {
+                            text: i18n("Select All")
+                            onClicked: bodyText.selectAll()
+                        }
+                    }
                 }
             }
 
