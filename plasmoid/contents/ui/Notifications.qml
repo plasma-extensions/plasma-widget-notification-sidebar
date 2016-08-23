@@ -19,6 +19,7 @@
 
 import QtQuick 2.0
 import QtQuick.Window 2.2
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
@@ -64,15 +65,22 @@ Column {
                 break
             }
         }
+        /* Stacking limit disable
         if (notificationsModel.count > 20) {
             notificationsModel.remove(notificationsModel.count-1)
-        }
+        }*/
 
-        if (notification.isPersistent) {
+        if (notification.isPersistent || plasmoid.configuration.stackAll) {
+            // Group notifications by app name
+            var position = 0;
+            while (position < notificationsModel.count &&
+                   notificationsModel.get(position).appName != notification.appName)
+                position ++;
+
             notification.created = new Date();
 
             notificationsModel.inserting = true;
-            notificationsModel.insert(0, notification);
+            notificationsModel.insert(position, notification);
             notificationsModel.inserting = false;
         }
 
@@ -122,7 +130,11 @@ Column {
     }
 
     function clearAll() {
-        notificationsModel.clear();
+        for (var i = 0; i < notificationsModel.count; i ++) {
+            var notificationProperties = notificationsModel.get(i)
+            closeNotification(notificationProperties.source)
+        }
+        // notificationsModel.clear();
     }
 
     Component {

@@ -34,6 +34,7 @@ Item {
     signal configurationChanged
 
     property alias cfg_showNotifications: showNotificationsCheckBox.checked
+    property alias cfg_stackAll: stackAllCheckBox.checked
     property alias cfg_showJobs: showJobsCheckBox.checked
 
     QtLayouts.ColumnLayout {
@@ -41,7 +42,10 @@ Item {
             id: showNotificationsCheckBox
             text: i18n("Show application and system notifications")
         }
-
+        QtControls.CheckBox {
+            id: stackAllCheckBox
+            text: i18n("Stack all the notifications")
+        }
         QtControls.CheckBox {
             id: showJobsCheckBox
             text: i18n("Track file transfers and other jobs")
