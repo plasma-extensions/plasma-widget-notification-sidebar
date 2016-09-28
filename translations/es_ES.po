@@ -1,0 +1,190 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://github.com/plasma-extensions/plasma-widget-"
+"notification-sidebar/issues\n"
+"POT-Creation-Date: 2016-09-27 23:03-0400\n"
+"PO-Revision-Date: 2016-09-27 23:02-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.5\n"
+
+#: plasmoid/contents/config/config.qml:27
+msgid "Information"
+msgstr "Información"
+
+#: plasmoid/contents/ui/configNotifications.qml:43
+msgid "Show application and system notifications"
+msgstr "Mostrar notificaciones de aplicaciones y del sistema"
+
+#: plasmoid/contents/ui/configNotifications.qml:47
+msgid "Stack all the notifications"
+msgstr "Apilar todas las notificaciones"
+
+#: plasmoid/contents/ui/configNotifications.qml:51
+msgid "Track file transfers and other jobs"
+msgstr "Rastrear transferencias de ficheros y otros trabajos"
+
+#: plasmoid/contents/ui/configNotifications.qml:55
+msgid "Use custom position for the notification popup"
+msgstr "Utilizar posición personalizada para los mensajes emergentes"
+
+#: plasmoid/contents/ui/JobDelegate.qml:54
+msgctxt "Placeholder is job name, eg. 'Copying'"
+msgid "%1 (Paused)"
+msgstr "%1 (Pausado)"
+
+#: plasmoid/contents/ui/JobDetailsItem.qml:51
+msgctxt ""
+"How much many bytes (or whether unit in the locale has been copied over total"
+msgid "%1 of %2"
+msgstr "%1 de %2"
+
+#: plasmoid/contents/ui/JobDetailsItem.qml:59
+msgctxt "Either just 1 file or m of n files are being processed"
+msgid "1 file"
+msgid_plural "%2 of %1 files"
+msgstr[0] "1 fichero"
+msgstr[1] "%2 de %1 ficheros"
+
+#: plasmoid/contents/ui/JobDetailsItem.qml:61
+msgctxt "Either just 1 dir or m of n dirs are being processed"
+msgid "1 dir"
+msgid_plural "%2 of %1 dirs"
+msgstr[0] "1 directorio"
+msgstr[1] "%2 de %1 directorios"
+
+#: plasmoid/contents/ui/JobDetailsItem.qml:64
+msgid "%1 of %2 %3"
+msgstr "%1 de %2 %3"
+
+#: plasmoid/contents/ui/JobDetailsItem.qml:91
+msgctxt "placeholder is row description, such as Source or Destination"
+msgid "%1:"
+msgstr "%1:"
+
+#: plasmoid/contents/ui/JobDetailsItem.qml:141
+msgctxt "Speed and estimated time to completion"
+msgid "%1 (%2 remaining)"
+msgstr "%1 (%2 restante)"
+
+#: plasmoid/contents/ui/Jobs.qml:77
+msgctxt "the job, which can be anything, has finished"
+msgid "%1: Finished"
+msgstr "%1: Terminado"
+
+#: plasmoid/contents/ui/Jobs.qml:77
+msgid "Job Finished"
+msgstr "Trabajo terminado"
+
+#: plasmoid/contents/ui/Jobs.qml:80
+msgctxt "the job, which can be anything, failed to complete"
+msgid "%1: Failed"
+msgstr "%1: Fallido"
+
+#: plasmoid/contents/ui/Jobs.qml:80
+msgid "Job Failed"
+msgstr "Tragajo fallido"
+
+#: plasmoid/contents/ui/Jobs.qml:92
+msgid "Open..."
+msgstr "Abrir..."
+
+#: plasmoid/contents/ui/main.qml:91
+msgid "Notifications and Jobs"
+msgstr "Notificaciones y Trabajos"
+
+#: plasmoid/contents/ui/main.qml:94
+msgid "No notifications or jobs"
+msgstr "Ninguna notificación o trabajo"
+
+#: plasmoid/contents/ui/main.qml:96 plasmoid/contents/ui/main.qml:100
+msgid "%1 running job"
+msgid_plural "%1 running jobs"
+msgstr[0] "%1 trabajo en ejecución"
+msgstr[1] "%1 trabajos en ejecución"
+
+#: plasmoid/contents/ui/main.qml:98 plasmoid/contents/ui/main.qml:100
+msgid "%1 notification"
+msgid_plural "%1 notifications"
+msgstr[0] "%1 notificación"
+msgstr[1] "%1 notificaciones"
+
+#: plasmoid/contents/ui/main.qml:125
+msgid "No new notifications."
+msgstr "Ninguna notificación nueva."
+
+#: plasmoid/contents/ui/main.qml:209
+msgid "Clear all"
+msgstr "Limpiar todo"
+
+#: plasmoid/contents/ui/main.qml:226
+msgid "&Configure Event Notifications and Actions..."
+msgstr "&Configurar Notificaciones de Eventos y Acciones..."
+
+#: plasmoid/contents/ui/NotificationDelegate.qml:158
+msgid "Copy"
+msgstr "Copiar"
+
+#: plasmoid/contents/ui/NotificationDelegate.qml:163
+msgid "Select All"
+msgstr "Seleccionar todo"
+
+#: plasmoid/contents/ui/NotificationItem.qml:62
+msgctxt "notification was just added, keep short"
+msgid "Just now"
+msgstr "Ahora"
+
+#: plasmoid/contents/ui/NotificationItem.qml:64
+msgctxt "10 seconds ago, keep short"
+msgid "10 s ago"
+msgstr "Hace 10s"
+
+#: plasmoid/contents/ui/NotificationItem.qml:66
+msgctxt "30 seconds ago, keep short"
+msgid "30 s ago"
+msgstr "Hace 30s"
+
+#: plasmoid/contents/ui/NotificationItem.qml:68
+msgctxt "minutes ago, keep short"
+msgid "%1 min ago"
+msgid_plural "%1 min ago"
+msgstr[0] "hace %1 minuto"
+msgstr[1] "hace %1 minutos"
+
+#: plasmoid/contents/ui/NotificationItem.qml:79
+msgctxt "notification was added yesterday, keep short"
+msgid "Yesterday"
+msgstr "Ayer"
+
+#: plasmoid/contents/ui/NotificationItem.qml:82
+msgctxt "notification was added n days ago, keep short"
+msgid "%1 day ago"
+msgid_plural "%1 days ago"
+msgstr[0] "Hace %1 día"
+msgstr[1] "Hace %1 días"
+
+#: translations/rc.cpp:1 rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Alexis López Zubieta"
+
+#: translations/rc.cpp:2 rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "azubieta90@gmail.com"
+
+#: translations/rc.cpp:3 rc.cpp:3
+msgctxt "HOMEPAGE OF TRANSLATORS"
+msgid "Your homepages"
+msgstr ""
